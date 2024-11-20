@@ -26,6 +26,6 @@
     "typescript": "^5"
   },
   "prisma": {
-  "seed": "node seed.js"
-}
+    "seed": "node seed.js"
+  }
 }
