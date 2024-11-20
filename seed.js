@@ -4,7 +4,7 @@ const prisma = new PrismaClient()
 
 
 const seed = async () => {
-        const createMany = await prisma.recipie.createMany({
+        const createMany = await prisma.Recipie.createMany({
             data: [
             { ingredient: 'placeolder', method: 'placeholder', steps: 'placeholder' },
             ],

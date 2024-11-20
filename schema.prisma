@@ -15,14 +15,6 @@ method  String
 steps   String
 }
 
-model Method {
-id String @id @default(cuid())
-}
-
-model Steps{
-    id String @id @default(cuid())
-}
-
 //these are here so they don't get overwritten
 model Video {
   id        Int      @id @default(autoincrement())
