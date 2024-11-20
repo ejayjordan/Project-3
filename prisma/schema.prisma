@@ -14,16 +14,16 @@ model Recipies {
   id    Int     @id @default(autoincrement())
   name  String
   image String
-  numStep String
   ingredients Ingredients[]
   steps  Steps[]
-  saved Boolean @default(false)
+  methods Methods[]
   likes Int
 }
 
 model Steps{
   id    Int     @id @default(autoincrement())
   name  String
+  number  Int
 
   Recipies Recipies[]
 }
@@ -39,4 +39,6 @@ model Ingredients {
 model Methods {
   id Int @id @default(autoincrement())
   name  String
+
+  Recipies Recipies[]
 }
