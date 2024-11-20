@@ -1,0 +1,42 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model Recipies {
+  id    Int     @id @default(autoincrement())
+  name  String
+  image String
+  numStep String
+  ingredients Ingredients[]
+  steps  Steps[]
+  saved Boolean @default(false)
+  likes Int
+}
+
+model Steps{
+  id    Int     @id @default(autoincrement())
+  name  String
+
+  Recipies Recipies[]
+}
+
+model Ingredients {
+  id Int @id @default(autoincrement())
+  name  String
+  tags  String
+
+  Recipies Recipies[]
+}
+
+model Methods {
+  id Int @id @default(autoincrement())
+  name  String
+}
