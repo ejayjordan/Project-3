@@ -10,7 +10,7 @@ async function seed() {
                 image: "",
                 ingredients: {
                     create: [
-                        {name: "ingredient test", tags: "test"}
+                        {name: "ingredient test", tags: "tags test"}
                     ]
                 },
                 steps: {

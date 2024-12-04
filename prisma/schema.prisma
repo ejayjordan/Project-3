@@ -17,6 +17,7 @@ model Recipies {
   ingredients Ingredients[]
   steps  Steps[]
   methods Methods[]
+  tags  Tags[]
   likes Int
 }
 
@@ -30,7 +31,7 @@ model Steps{
 model Ingredients {
   id Int @id @default(autoincrement())
   name  String
-  tags  String
+  Tags  Tags[]
   Recipies Recipies[]
 }
 
@@ -43,4 +44,6 @@ model Methods {
 model Tags {
   id Int @id @default(autoincrement())
   name  String
+  Ingredients Ingredients[]
+  Recipies Recipies[]
 }
