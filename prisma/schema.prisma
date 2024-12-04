@@ -11,7 +11,7 @@ datasource db {
 
 
 model Recipies {
-  id    Int     @id @default(autoincrement())
+  id    String     @id @default(cuid())
   name  String
   image String
   ingredients Ingredients[]

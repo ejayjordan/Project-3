@@ -1,12 +1,13 @@
-'use server'
+'use client'
 import { PrismaClient } from '@prisma/client';
+import { useRouter } from 'next/navigation';
 const prisma = new PrismaClient();
 
-export default async function Extract() {
-    const getRecipies = await prisma.recipies.findMany()
-    
-
+export default function Extract() {
+    const router = useRouter()
 return (
-    {getRecipies}
+    <><button onClick={() => router.push('/search/searchRecipe')}>Search Recipies</button>
+    <button onClick={() => router.push('/generateRecipe')}>Generate Recipies</button>
+    <button onClick={() => router.push('/createRecipe')}>Create Recipies</button></>
 );
 }

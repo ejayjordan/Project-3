@@ -1,11 +1,17 @@
 import { PrismaClient } from "@prisma/client";
+
 async function createIngredients(formData : FormData) {
     'use server';
     const prisma = new PrismaClient()
     await prisma.ingredients.create({
         data: {
-            name:String(formData.get('ingredientsInput')),
-            tags:String(formData.get('tagsInput'))
+            name:String(formData.get('ingredientsInput'))
+        }
+    })
+
+    await prisma.tags.create({
+        data: {
+            name:String(formData.get('tagsInput'))
         }
     })
 }
