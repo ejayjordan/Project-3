@@ -1,8 +1,12 @@
+'use server'
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 
-export default function Home() {
+export default async function Extract() {
+    const getRecipies = await prisma.recipies.findMany()
+    
 
 return (
-    <main>
-    </main>
+    {getRecipies}
 );
 }

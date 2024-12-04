@@ -6,24 +6,22 @@ const prisma = new PrismaClient()
 async function seed() {
         const createMany = await prisma.recipies.create({
             data: {
-                name: "",
+                name: "test recipie",
                 image: "",
                 ingredients: {
-                    create: {
-                        name: "name",
-                        tags: "tag"
-                    }
+                    create: [
+                        {name: "ingredient test", tags: "test"}
+                    ]
                 },
                 steps: {
-                    create: {
-                        name: "name",
-                        number: 0
-                    }
+                    create: [
+                        {name: "step test", number: 1}
+                    ]
                 },
                 methods: {
-                    create: {
-                        name: ""
-                    }
+                    create: [
+                        {name: "method test"}
+                    ]
                 },
                 likes: 0
             },

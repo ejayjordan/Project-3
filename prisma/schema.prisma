@@ -22,9 +22,8 @@ model Recipies {
 
 model Steps{
   id    Int     @id @default(autoincrement())
-  name  String
+  name  String 
   number  Int
-
   Recipies Recipies[]
 }
 
@@ -32,13 +31,16 @@ model Ingredients {
   id Int @id @default(autoincrement())
   name  String
   tags  String
-
   Recipies Recipies[]
 }
 
 model Methods {
   id Int @id @default(autoincrement())
   name  String
-
   Recipies Recipies[]
+}
+
+model Tags {
+  id Int @id @default(autoincrement())
+  name  String
 }
