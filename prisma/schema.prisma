@@ -24,7 +24,6 @@ model Recipies {
 model Steps{
   id    Int     @id @default(autoincrement())
   name  String 
-  number  Int
   Recipies Recipies[]
 }
 

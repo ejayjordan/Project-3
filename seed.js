@@ -15,7 +15,7 @@ async function seed() {
                 },
                 steps: {
                     create: [
-                        {name: "step test", number: 1}
+                        {name: "step test"}
                     ]
                 },
                 methods: {
