@@ -14,6 +14,7 @@ export default async function Page( ) {
     return(<div>
         <form action={createMethod}>
             <label>Method: <input type="text" name="methodInput" placeholder="Method" /></label>
+            <button type="submit">Add</button>
         </form>
     </div>)
 }
