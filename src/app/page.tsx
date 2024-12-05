@@ -1,19 +1,26 @@
-import { prisma } from '@/lib/prisma';
+'use client'
+import { useRouter } from 'next/navigation';
 
-const Home = async () => {
-  const recipies = await prisma.recipies.findMany();
+export default function createRecipe() {
+    const router = useRouter()
 
-  return (
-    <div className="p-4 flex flex-col gap-y-4">
-      <h2>Home</h2>
-
-      <ul className="flex flex-col gap-y-2">
-        {recipies.map((recipies) => (
-          <li key={recipies.id}>{recipies.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default Home;
+    const ingredientsForm = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/ingredientsForm");
+    };
+    const methodsForm = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/methodsForm");
+    };
+    const stepsForm = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/stepsForm");
+    };
+return (
+    <>
+    <button onClick={ingredientsForm}>Add Ingredients</button>
+    <button onClick={methodsForm}>Add Methods</button>
+    <button onClick={stepsForm}>Add Steps</button>
+    </>
+);
+}
