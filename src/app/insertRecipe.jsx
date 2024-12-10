@@ -8,10 +8,8 @@ export default async function InsertRecipes(formData) {
         data: {
           name: formData.get("recipeName"),
           image: formData.get("recipeImage"),
-          steps: formData.get("steps"),
-          ingredients: formData.get("ingredients"),
-          methods: formData.get("methods"),
-          tag: formData.get("tags"),
+          steps: formData.get("recipeSteps"),
+          tag: formData.get("recipeTags"),
           likes: 0
         },
       });

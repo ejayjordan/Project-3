@@ -1,8 +1,7 @@
 'use server';
 import { PrismaClient } from "@prisma/client";
-import { redirect } from "next/navigation";
 
-async function createIngredients(formData : FormData) {
+export default async function createIngredients(formData : FormData) {
     const prisma = new PrismaClient()
     await prisma.ingredients.create({
         data: {

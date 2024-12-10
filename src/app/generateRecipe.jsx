@@ -9,8 +9,14 @@ let allMethods =[]
 let potentialIngredients = []
 let step
 let allStepsDisplay = []
+let method
+let allMethodsDisplay = []
+let ingredient
+let allIngredientsDisplay = []
 let tagList = []
 let allStepsString = ""
+let allMethodsString = ""
+let allIngredientsString = ""
 let StepNum
 
 export default function Generate(props) {
@@ -37,12 +43,12 @@ export default function Generate(props) {
   return (
     <div>
       <div id="dropDownTags">
-      Select a maximum of 5 tags to generate ingredients: 
+      Select a minimum of 2 tags to generate ingredients: 
       {option1}{option2}{option3}{option4}{option5}
       </div>
 <br></br>
     <div id="dropDownSteps">
-      Select how many steps your recipe should be:
+      Select how many steps your recipe should have:
         <select className="dropdown" id="stepnum">
           <option>1</option>
           <option>2</option>
@@ -56,7 +62,7 @@ export default function Generate(props) {
 <button className="enterButtons" onClick={selectionCheck}>
           Generate!
         </button>
-        {generation && <Generation allStepsDisplay={allStepsDisplay} allStepsString={allStepsString} tagList={tagList} StepNum={StepNum}></Generation>}
+        {generation && <Generation allStepsDisplay={allStepsDisplay} allStepsString={allStepsString} allMethodsDisplay={allMethodsDisplay} allMethodsString = {allMethodsString} allIngredientsDisplay={allIngredientsDisplay} allIngredientsString={allIngredientsString} tagList={tagList} StepNum={StepNum}></Generation>}
     </div>)
 
     function dropDown(num){
@@ -102,10 +108,14 @@ export default function Generate(props) {
         }}}
     
         for(let i=(StepNum); i>=0; i--){
-            allIngredients.push(potentialIngredients[Math.floor(Math.random()*potentialIngredients.length)])
+            ingredient = allIngredients.push(potentialIngredients[Math.floor(Math.random()*potentialIngredients.length)])
+            let ingredientT = <p key={"ingredient"+i}>{ingredient}</p>
+            allIngredientsString+=(ingredient+",")
         }
         for(let i=StepNum; i>=0; i--){
             allMethods.push(methods[Math.floor(Math.random()*methods.length)])
+            let methodD = <p key={"method"+i}>{method}</p>
+            allMethodsDisplay+=(method+",")
         }
     
     

@@ -7,7 +7,10 @@ export default function Generation(props) {
 
   let allStepsDisplay=props.allStepsDisplay
   let allStepsString=props.allStepsString
-  let StepNum=props.StepNum.length
+  let allIngredientsDisplay=props.allIngredientsDisplay
+  let allIngredientsString = props.allIngredientsString
+  let allMethodsDisplay = props.allMethodsDisplay
+  let allMethodsString = props.allMethodsString
   let tagList=props.tagList
 
 
@@ -17,12 +20,15 @@ export default function Generation(props) {
     <div>
        <div>
         {allStepsDisplay}
+        {allMethodsDisplay}
+        {allIngredientsDisplay}
         <br></br><br></br>
        </div>
 
        <form action={InsertRecipes}><div>
             <input type="hidden" name="recipeSteps" value={allStepsString}></input>
-            <input type="hidden" name="stepNumber" value={StepNum}></input>
+            <input type="hidden" name="recipeIngredients" value={allIngredientsString}></input>
+            <input type="hidden" name="recipeMethods" value={allMethodsString}></input>
             <input type="hidden" name="recipeTags" value={tagList}></input>
         <br></br><br></br>
             Recipe Name: <input className="textbox" id="recipeName" name="recipeName" defaultValue="Name"/>

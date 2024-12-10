@@ -1,23 +1,20 @@
 import { PrismaClient } from "@prisma/client";
+async function searchRecipies(formData : FormData) {
+    'use server';
+    const prisma = new PrismaClient()
+    await prisma.recipies.findMany({
+    where: {
+         name:{},
+         tags:{}
+        },
+  })
+}
 
-export default async function Page() {
-    async function findRecipies(formData : FormData) {
-        'use server';
-        const prisma = new PrismaClient()
-        const recipes = await prisma.recipies.findMany({
-        where: {
-            name:{},
-            tags:{}
-            },
-        })
-    }
-
+  export default async function Page( ) {
     return(<div>
-        <form action={findRecipies}>
-            <label>Search: <input id="searchBar" type="text" name="searchInput" placeholder="Search recipe names or tags"/></label>
+        <form action={searchRecipies}>
+            <label>Search: <input type="text" name="searchInput" placeholder="Search" /></label>
             <button type="submit">GO</button>
         </form>
-    </div>
-    )
-    
+    </div>)
 }

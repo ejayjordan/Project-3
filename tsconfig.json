@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/searchRecipie.jsx", "src/app/createRecipe.jsx", "src/app/page.jsx", "src/app/search/page.jsx", "src/app/generateRecipe.jsx", "src/app/generateRecipe/page.tsx", "src/app/insert.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/searchRecipie.jsx", "src/app/createRecipe.jsx", "src/app/page.jsx", "src/app/search/page.jsx", "src/app/generateRecipe.jsx", "src/app/generateRecipe/page.tsx", "src/app/insert.jsx", "src/app/searchRecipe/page.jsx"],
   "exclude": ["node_modules"]
 }
