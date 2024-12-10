@@ -1,7 +1,7 @@
+'use server';
 import { PrismaClient } from "@prisma/client";
 import { redirect } from "next/navigation";
 async function createMethod(formData : FormData) {
-    'use server';
     const prisma = new PrismaClient()
     await prisma.methods.create({
         data: {

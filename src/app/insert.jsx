@@ -1,9 +1,8 @@
-'use client';
 import React from 'react';
 
-import InsertIngredient from './ingredientsForm'
-import InsertStep from './stepsForm'
-import InsertMethod from './methodsForm'
+import InsertIngredient from './ingredientsForm/page'
+import InsertStep from './stepsForm/page'
+import InsertMethod from './methodsForm/page'
 
 let text = "(Ex: {method} {ingredient} for 10 minutes)"
 

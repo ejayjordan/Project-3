@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {useRouter} from "next/navigation";
-import Generation from "./generation"
+import Generation from "./generate"
 let generation = false
 
 let allIngredients =[]
@@ -11,7 +11,7 @@ let step
 let allStepsDisplay = []
 let tagList = []
 let allStepsString = ""
-let StepNum = step.length
+let StepNum
 
 export default function Generate(props) {
   const router = useRouter();
