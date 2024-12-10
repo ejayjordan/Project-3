@@ -11,7 +11,7 @@ async function createMethod(formData : FormData) {
     redirect('/')
 }
 
-export default async function Page( ) {
+export default async function InsertMethod( ) {
 
     return(<div>
         <form action={createMethod}>

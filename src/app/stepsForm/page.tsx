@@ -12,7 +12,7 @@ async function createSteps(formData : FormData) {
 }
 
 
-export default async function Page( ) {
+export default async function InsertStep( ) {
 
     return(<div>
         <form action={createSteps}>

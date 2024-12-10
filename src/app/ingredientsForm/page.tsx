@@ -18,7 +18,7 @@ async function createIngredients(formData : FormData) {
     redirect('/')
 }
 
-export default async function Page( ) {
+export default async function InsertIngredient( ) {
 
     return(<div>
         <form action={createIngredients}>
