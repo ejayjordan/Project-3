@@ -26,35 +26,35 @@ export default function Generate(props) {
   let steps = stepList.map(stepList => stepList.name)
   let tags = [...new Set(tagsFull)]
 
-  let dropdown1 = dropDown(1)
-  let dropdown2 = dropDown(2)
-  let dropdown3 = dropDown(3)
-  let dropdown4 = dropDown(4)
-  let dropdown5 = dropDown(5)
+  let option1 = dropDown(1)
+  let option2 = dropDown(2)
+  let option3 = dropDown(3)
+  let option4 = dropDown(4)
+  let option5 = dropDown(5)
   let Choices = []
 
   
   return (
     <div>
-   Select up to five options for your recipe: 
- {dropdown1}
- {dropdown2}
- {dropdown3}
- {dropdown4}
- {dropdown5}
+      <div id="dropDownTags">
+      Select a maximum of 5 tags to generate ingredients: 
+      {option1}{option2}{option3}{option4}{option5}
+      </div>
 <br></br>
-Select how many steps your recipe should be:
-<select className="dropdown" id="stepnum">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-</select>
+    <div id="dropDownSteps">
+      Select how many steps your recipe should be:
+        <select className="dropdown" id="stepnum">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+    </div>
 <br></br>
 <button className="enterButtons" onClick={selectionCheck}>
-          Ready!
+          Generate!
         </button>
         {generation && <Generation allStepsDisplay={allStepsDisplay} allStepsString={allStepsString} tagList={tagList} StepNum={StepNum}></Generation>}
     </div>)

@@ -10,22 +10,22 @@ async function seed() {
                 image: "",
                 ingredients: {
                     create: [
-                        {name: "pepperoni"}
+                        {name: "pepperoni"}, {name: "brocoli"}, {name: "kitkat"}
                     ]
                 },
                 steps: {
                     create: [
-                        {name: "{method} {ingredient} at the wall"}
+                        {name: "{method} {ingredient} at the wall"}, {name: "{method} the {ingredient} until browned"}, {name: "{ingredient} should be {method} until finely diced"}
                     ]
                 },
                 methods: {
                     create: [
-                        {name: "throw"}
+                        {name: "throw"}, {name: "broil"}, {name: "chop"}
                     ]
                 },
                 tags: {
                     create: [
-                        {name: "meat"}
+                        {name: "meat"}, {name: "vegetable"}, {name: "candy"}
                     ]
                 },
                 likes: 0
