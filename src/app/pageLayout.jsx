@@ -35,7 +35,7 @@ export default function Home(props) {
         {generatePage && <Generate ingredientList={ingredientList} methods={methods} stepList={stepList}></Generate>}
         {insertPage && <Insert></Insert>}     
 
-
+        
         </div>)
 
   function generatePageLoad(){

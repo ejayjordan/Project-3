@@ -31,14 +31,14 @@ export default function Generation(props) {
             <input type="hidden" name="recipeMethods" value={allMethodsString}></input>
             <input type="hidden" name="recipeTags" value={tagList}></input>
         <br></br><br></br>
-            Recipe Name: <input className="textbox" id="recipeName" name="recipeName" defaultValue="Name"/>
+            Recipe Name: <input className="textbox" id="recipeName" name="recipeName" placeholder="Name"/>
             <br></br>
-            Recipe Image: <input className="textbox" id="recipeImage" name="recipeImage" defaultValue="Image Path Here"/>
+            Recipe Image: <input className="textbox" id="recipeImage" name="recipeImage" placeholder="Image Path Here"/>
             <br></br>
             <button className="enterButtons" type="submit">
           Enter
         </button>
-            </div>
+        </div>
 
         </form>
     </div>)

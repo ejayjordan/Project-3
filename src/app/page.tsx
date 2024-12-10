@@ -15,6 +15,11 @@ const recipeList = await prisma.recipies.findMany()
 return( <div>
     
     <Home ingredientList={ingredientList} methodList={methodList} stepList={stepList} recipeList={recipeList}> </Home>
+    <p> Welcome to my recipe generator.</p>
+        <p>You can generate recipes using tags and the number of steps,</p>
+        <p>You can insert ingredients, steps and methods into the database</p>
+        <p>Or you can search for recipes using tags or recipe names.
+    </p>
 
 
 

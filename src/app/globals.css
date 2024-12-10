@@ -1,12 +1,42 @@
 body{
-  background-color: white;
+  background-color: rgb(209, 206, 199);
   color:black;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+a {
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-decoration: overline underline;
+  color:rgb(68, 119, 68);
+}
+
+p{
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 button{
   background-color: darkseagreen;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 5px #999;
   color:black;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 button:active{
@@ -14,3 +44,10 @@ button:active{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+.mainButtons {
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
