@@ -17,12 +17,39 @@ export default function createRecipe() {
         router.push("/stepsForm");
     };
 
+    const generateRecipe = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/generateRecipe");
+    };
+
+    const individualRecipe = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/individualRecipe");
+    };
+
+    const searchRecipe = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/searchRecipe");
+    };
+
+
 return (
     <>
     <h1>Recipe Generator</h1>
-    <button onClick={ingredientsForm}>Add Ingredients</button>
-    <button onClick={methodsForm}>Add Methods</button>
-    <button onClick={stepsForm}>Add Steps</button>
+    <div id="forms">
+        <button onClick={ingredientsForm}>Add Ingredients</button>
+        <button onClick={methodsForm}>Add Methods</button>
+        <button onClick={stepsForm}>Add Steps</button>
+    </div>
+
+    <div id="pages">
+        <button onClick={generateRecipe}>Generate Recipes</button>
+        <button onClick={searchRecipe}>Search For A Recipe</button>
+        <button onClick={individualRecipe}>Get A Recipe</button>
+    </div>
     </>
 );
+
+//display saved recipes here?
+
 }
