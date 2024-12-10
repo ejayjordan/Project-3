@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { redirect } from "next/navigation";
 
 async function createIngredients(formData : FormData) {
     'use server';
@@ -14,6 +15,7 @@ async function createIngredients(formData : FormData) {
             name:String(formData.get('tagsInput'))
         }
     })
+    redirect('/')
 }
 
 export default async function Page( ) {

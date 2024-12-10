@@ -12,8 +12,8 @@ function generateRecipe() {
     const [imageUrl, setImageUrl] = useState('');
 
     const stepsgeneratelogic=()=>{
-        const numSteps = parseInt(value, 5);
-        if (isNaN(numSteps) || numSteps <= 1) {
+        const numSteps = parseInt(value, 10);
+        if (isNaN(numSteps) || numSteps <= 4) {
           setError("You need to have more than 4 steps to generate a recipe");
           return false;
         }
@@ -27,15 +27,19 @@ function generateRecipe() {
       }
     
       const taglogic=()=>{
-        const tagarray= tags;
-        if(tags.length<2){
+        const tagarray= selectedTags;
+        if(selectedTags.length<5){
+    
+          setError("You need to have at least five tags to generate a recipe but less than 10");
           return false;
          }
-         else if(tags.length>5){
+         else if(selectedTags.length>10){
+          setError("You need to have at least five tags to generate a recipe but less than 10");
           return false;
          }
          else{
           setnewtags(tagarray);
+          setError("");
           return true;
          }
       }

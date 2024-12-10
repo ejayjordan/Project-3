@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { redirect } from "next/navigation";
 async function createMethod(formData : FormData) {
     'use server';
     const prisma = new PrismaClient()
@@ -7,6 +8,7 @@ async function createMethod(formData : FormData) {
             name:String(formData.get('methodInput'))
         }
     })
+    redirect('/')
 }
 
 export default async function Page( ) {

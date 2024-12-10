@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { redirect } from "next/navigation";
 async function createSteps(formData : FormData) {
     'use server';
     const prisma = new PrismaClient()
@@ -7,6 +8,7 @@ async function createSteps(formData : FormData) {
             name:String(formData.get('nameInput')),
         }
     })
+    redirect('/')
 }
 
 
@@ -17,5 +19,7 @@ export default async function Page( ) {
             <label>Steps: <input type="text" name="nameInput" placeholder="Steps" /></label>
             <button type="submit">Add</button>
         </form>
-    </div>)
+    </div>
+    )
+
 }

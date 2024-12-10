@@ -19,6 +19,7 @@ export default function createRecipe() {
 
 return (
     <>
+    <h1>Recipe Generator</h1>
     <button onClick={ingredientsForm}>Add Ingredients</button>
     <button onClick={methodsForm}>Add Methods</button>
     <button onClick={stepsForm}>Add Steps</button>
