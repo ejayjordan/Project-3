@@ -16,6 +16,7 @@ export default function createRecipe() {
         e.preventDefault()
         router.push("/stepsForm");
     };
+
 return (
     <>
     <button onClick={ingredientsForm}>Add Ingredients</button>
