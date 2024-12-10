@@ -8,15 +8,4 @@ async function createMethod(formData : FormData) {
             name:String(formData.get('methodInput'))
         }
     })
-    redirect('/')
-}
-
-export default async function InsertMethod( ) {
-
-    return(<div>
-        <form action={createMethod}>
-            <label>Method: <input type="text" name="methodInput" placeholder="Method" /></label>
-            <button type="submit">Add</button>
-        </form>
-    </div>)
 }

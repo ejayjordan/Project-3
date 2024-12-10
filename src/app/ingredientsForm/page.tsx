@@ -15,16 +15,4 @@ async function createIngredients(formData : FormData) {
             name:String(formData.get('tagsInput'))
         }
     })
-    redirect('/')
-}
-
-export default async function InsertIngredient( ) {
-
-    return(<div>
-        <form action={createIngredients}>
-            <label>Method: <input type="text" name="ingredientsInput" placeholder="Ingredient" /></label>
-            <label>Tags: <input type="text" name="tagsInput" placeholder="Tag" /></label>
-            <button type="submit">Add</button>
-        </form>
-    </div>)
 }
